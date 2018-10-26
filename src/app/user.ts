@@ -1,9 +1,12 @@
 export class User {
+
   constructor(
-    public photourl:string,
-    public userprofile:string, 
+    public photoUrl:string,
+    public userProfile:string,
     public bio:string,
-    public followers:string,
-    public following:string,
+    public numRepos:number,
+    public followers:number,
+    public following:number,
   ) {}
+  
 }
