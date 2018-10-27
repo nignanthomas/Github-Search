@@ -1,3 +1,33 @@
-<p>
-  github-profile works!
-</p>
+<div class="container">
+  <div class="row">
+    <app-github-form (addUser)='getResponse($event)'></app-github-form>
+
+  </div> <!--end row form -->
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="profile-card">
+        <img src="{{user.photoUrl}}" alt="Avatar">
+        <h3>{{user.userProfile}}</h3>
+        <p>{{user.bio}}</p>
+        <div class="follow">
+          <button type="button" name="button">Followers: {{user.followers}}</button>
+          <button type="button" name="button">Following: {{user.following}}</button>
+        </div>
+        <button type="button" name="button" (click)='toggleRepos()'>Repos:{{user.numRepos}}</button>
+        {{user.showRepos}}
+      </div>
+
+
+
+    </div> <!-- end div profile -->
+
+    <div class="col-md-6">
+      <app-github-repo *ngIf='user.showRepos'></app-github-repo>
+    </div> <!-- end div repos -->
+
+
+  </div> <!-- end div github -->
+
+</div>

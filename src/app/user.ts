@@ -1,4 +1,5 @@
 export class User {
+  public showRepos:boolean;
 
   constructor(
     public photoUrl:string,
@@ -7,6 +8,8 @@ export class User {
     public numRepos:number,
     public followers:number,
     public following:number,
-  ) {}
-  
+  ) {
+    this.showRepos = false;
+  }
+
 }

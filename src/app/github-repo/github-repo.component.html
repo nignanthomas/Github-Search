@@ -1,3 +1,10 @@
-<p>
-  github-repo works!
-</p>
+<div *ngFor='let repo of arrayRepo'>
+  <div class="display-repos">
+
+    <p>{{repo.appName}}</p>
+    <p>{{repo.description}}</p>
+    <button type="button" name="button"> <a href="{{repo.repoLink}}"></a> </button>
+
+  </div>
+  
+</div>

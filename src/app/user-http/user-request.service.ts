@@ -13,7 +13,7 @@ export class UserRequestService {
 
   user: User;
   repo: Repo;
-  arrayRepo:[];
+  arrayRepo:Repo[];
   constructor(private http:HttpClient) {
     this.user = new User("", "", "", 0, 0, 0);
     this.repo = new Repo("", "", "");
@@ -48,50 +48,29 @@ export class UserRequestService {
     this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=" + environment.accessToken).subscribe((response)=>{
       const reposData=response;
 
-      reposData.forEach(repoData){
+      // reposData.forEach(function(repoData){
+      //   this.repo.appName = repoData["name"];
+      //   this.repo.repoLink = repoData["html_url"];
+      //   this.repo.description = repoData["description"];
+      //   this.arrayRepo.push(this.repo);
+      //
+      //   console.log(repoData);
+      // });
+      this.arrayRepo = [];
+      for (let index=0; index<reposData["length"]; index++) {
 
-        this.repo.appName = repoData["name"];
-        this.repo.repoLink = repoData["html_url"];
-        this.repo.description = repoData["description"];
-
+        this.repo.appName = reposData[index]["name"];
+        this.repo.repoLink = reposData[index]["html_url"];
+        this.repo.description = reposData[index]["description"];
         this.arrayRepo.push(this.repo);
+        this.repo = new Repo ("", "", "");
 
-        console.log(repoData);
       }
-      console.log(arrayRepo)
-
+      console.log(this.arrayRepo);
+      // console.log(reposData)
     })
 
 
   } //end repoRequest
 
 }
-
-
-
-
-
-
-// interface ApiResponse {
-//
-// }
-// let userData =new Promise((resolve,reject)=>{
-//       this.http.get('https://api.github.com/users/'+ 'nignanthomas' + '?access_token'+  environment.accessToken).toPromise().then(response=>{
-//           // this.user.photoUrl = response.avatar_url;
-//           // this.user.userProfile = response.login;
-//           // this.user.bio = response.bio;
-//           // this.user.numRepos = response.public_repos;
-//           // this.user.followers = response.followers;
-//           // this.user.following = response.following;
-//           console.log(response);
-//           resolve()
-//       },
-//       error=>{
-//               this.user.userProfile = "Profile Not Found";
-//               reject(error);
-//           }
-//       )
-//   })
-//
-//   return userData;
-//
