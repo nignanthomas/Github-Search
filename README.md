@@ -25,7 +25,7 @@ You have to submit twice to fetch properly from the repos api.
 [Github-Search](https://nignanthomas.github.io/Github-Search/)
 
 ### License
-This project is under the [MIT](https://github.com/marvinChomba/github/blob/master/LICENSE) license.
+This project is under the [MIT](https://github.com/nignanthomas/github/blob/master/LICENSE) license.
 
 Copyright (c) 2018 nignanthomas.
 

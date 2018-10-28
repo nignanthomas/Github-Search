@@ -22,8 +22,6 @@ export class UserRequestService {
 
 
   private userInput = "";
-  // private githubData:any = "";
-  // private githubData:any = "";
 
 
   userRequest(userInput) {
