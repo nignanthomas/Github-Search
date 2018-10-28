@@ -1,10 +1,7 @@
-<div *ngFor='let repo of arrayRepo'>
   <div class="display-repos">
 
-    <p>{{repo.appName}}</p>
+    <p style="text-decoration: underline">{{repo.appName}}</p>
     <p>{{repo.description}}</p>
-    <button type="button" name="button"> <a href="{{repo.repoLink}}"></a> </button>
+    <button type="button" name="button"> <a href="{{repo.repoLink}}">View Repo</a> </button>
 
   </div>
-  
-</div>

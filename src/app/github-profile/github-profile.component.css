@@ -2,3 +2,22 @@ img {
   width: 50%;
   height: 50%;
 }
+
+.profile-card {
+  padding: 10px;
+  border: 2px solid teal;
+  border-radius: 4px;
+  background-color: rgba(224, 208, 246, 0.68);
+}
+
+.following {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.max{
+  height: 400px;
+}

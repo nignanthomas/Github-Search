@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GithubFormComponent } from './github-form/github-form.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { GithubRepoComponent } from './github-repo/github-repo.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubFormComponent,
     GithubProfileComponent,
-    GithubRepoComponent
+    GithubRepoComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

@@ -19,16 +19,11 @@ export class GithubFormComponent implements OnInit {
 
   submitUser() {
     this.addUser.emit(this.username);
-
-    // this.userService.userRequest(this.username);
-    // this.user = this.userService.user;
   }
 
 
+
   constructor() {}
-
-
-
 
 
   ngOnInit() {

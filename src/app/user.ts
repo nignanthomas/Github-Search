@@ -8,6 +8,7 @@ export class User {
     public numRepos:number,
     public followers:number,
     public following:number,
+    public created:string
   ) {
     this.showRepos = false;
   }

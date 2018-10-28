@@ -23,17 +23,17 @@ export class GithubProfileComponent implements OnInit {
     this.userService.userRequest(username);
     this.user = this.userService.user;
     console.log("Got User Response");
+    console.log(this.user);
 
     this.userService.repoRequest(username);
     this.arrayRepo = this.userService.arrayRepo;
     console.log("Got Repos Response");
+    console.log(this.arrayRepo);
   }
 
-  // getRepos(username) {
-  //   this.userService.repoRequest(username);
-  //   this.arrayRepo = this.userService.arrayRepo;
-  //   console.log("Got Repos Response");
-  // }
+
+
+
 
   toggleRepos(){
     this.user.showRepos = !this.user.showRepos;
@@ -41,6 +41,7 @@ export class GithubProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 }
