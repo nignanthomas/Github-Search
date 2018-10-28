@@ -8,6 +8,7 @@ import { GithubFormComponent } from './github-form/github-form.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { GithubRepoComponent } from './github-repo/github-repo.component';
 import { DateCountPipe } from './date-count.pipe';
+import { BolderDirective } from './bolder.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DateCountPipe } from './date-count.pipe';
     GithubFormComponent,
     GithubProfileComponent,
     GithubRepoComponent,
-    DateCountPipe
+    DateCountPipe,
+    BolderDirective
   ],
   imports: [
     BrowserModule,

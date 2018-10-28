@@ -2,9 +2,9 @@
 
   <!--Name Input -->
       <div class="form-group">
-        <label for="name">Name:</label>
+        <label appBolder for="name">Name:</label>
         <input id="name" class="form-control" type="text" required [(ngModel)]="username" name="name" #name="ngModel">
-        <button type="submit" class=" btn-success">Search</button>
+        <button type="submit" class="btn-primary"> < 🔍 > Click Me Twice </button>
       </div>
       <div class="alert-danger" [hidden]="name.valid || name.pristine">
         <p>Name is required</p>

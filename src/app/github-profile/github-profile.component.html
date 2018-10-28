@@ -5,10 +5,10 @@
 
   <div class="row">
     <div class="col-md-6">
-      <div class="profile-card">
+      <div appBolder class="profile-card">
         <div class="center">
           <img src="{{user.photoUrl}}" alt="Avatar">
-          <h3>{{user.userProfile}}</h3>
+          <h3 appBolder >{{user.userProfile}}</h3>
         </div>
         <p>{{user.bio}}</p>
         <div class="follow">
@@ -26,7 +26,7 @@
     </div> <!-- end div profile -->
 
 
-    <div class="col-md-6">
+    <div class="col-md-6 scroll">
       <div *ngFor='let repo of arrayRepo'>
         <app-github-repo *ngIf='user.showRepos' [repo]='repo'></app-github-repo>
       </div>

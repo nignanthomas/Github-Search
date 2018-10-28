@@ -8,6 +8,8 @@ img {
   border: 2px solid teal;
   border-radius: 4px;
   background-color: rgba(224, 208, 246, 0.68);
+  max-height: 500px;
+  overflow: scroll;
 }
 
 .following {
@@ -20,4 +22,13 @@ img {
 
 .max{
   height: 400px;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.scroll {
+  max-height: 500px;
+  overflow: scroll;
 }
