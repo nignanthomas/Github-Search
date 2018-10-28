@@ -1,6 +1,40 @@
-# GithubSearch
+# Github-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+
+### Author
+[nignanthomas](https://github.com/nignanthomas)
+
+### Description
+An App to Search for Github profiles and their Repos.
+
+
+### Technologies Used
+
+1. Angular 6.
+2. HTML.
+3. CSS & Bootsrap.
+4. JavaScript and Typescript.
+5. Git version control.
+6. Github API.
+
+
+### Known Bugs
+You have to submit twice to fetch properly from the repos api.
+
+### Live site
+[Github-Search](https://nignanthomas.github.io/Github-Search/)
+
+### License
+This project is under the [MIT](https://github.com/marvinChomba/github/blob/master/LICENSE) license.
+
+Copyright (c) 2018 nignanthomas.
+
+
+
+
+
+
+
 
 ## Development server
 

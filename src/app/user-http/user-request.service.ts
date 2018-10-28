@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment';
 import { User } from '../user';
 import { Repo } from '../repo-class/repo';
 
+
 @Injectable(
   // providedIn: 'root'
 )
@@ -37,6 +38,10 @@ export class UserRequestService {
     this.user.followers = userData["followers"];
     this.user.following = userData["following"];
     this.user.created = userData["created_at"];
+
+    console.log(this.user)
+
+    return this.user;
   })
 
 
@@ -46,8 +51,8 @@ export class UserRequestService {
 
   repoRequest(userInput) {
 
-    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=" + environment.accessToken).subscribe((response)=>{
-      const reposData=response;
+    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=" + environment.accessToken).subscribe((response) =>{
+      const reposData= response;
 
       this.arrayRepo = [];
 
@@ -59,8 +64,8 @@ export class UserRequestService {
         this.arrayRepo.push(this.repo);
 
       }
-      return this.arrayRepo;
       console.log(this.arrayRepo)
+      return this.arrayRepo;
     })
 
 

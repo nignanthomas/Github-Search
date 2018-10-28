@@ -22,11 +22,13 @@ export class GithubProfileComponent implements OnInit {
   getResponse(username) {
     this.userService.userRequest(username);
     this.user = this.userService.user;
+
     console.log("Got User Response");
     console.log(this.user);
 
     this.userService.repoRequest(username);
     this.arrayRepo = this.userService.arrayRepo;
+
     console.log("Got Repos Response");
     console.log(this.arrayRepo);
   }
