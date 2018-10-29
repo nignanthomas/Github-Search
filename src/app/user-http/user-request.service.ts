@@ -37,6 +37,7 @@ export class UserRequestService {
     this.user.following = userData["following"];
     this.user.created = userData["created_at"];
 
+    console.log('I am the service')
     console.log(this.user)
 
     return this.user;
@@ -61,8 +62,11 @@ export class UserRequestService {
         this.repo.description = reposData[index]["description"];
         this.arrayRepo.push(this.repo);
 
+
       }
-      console.log(this.arrayRepo)
+      console.log('I am the service')
+      console.log(this.arrayRepo);
+      // this.arrayRepo.length=0;
       return this.arrayRepo;
     })
 
