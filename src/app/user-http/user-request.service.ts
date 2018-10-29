@@ -26,7 +26,7 @@ export class UserRequestService {
 
   userRequest(userInput) {
 
-    this.http.get("https://api.github.com/users/" + userInput + "?access_token=" + environment.accessToken).subscribe((response)=>{
+    this.http.get("https://api.github.com/users/" + userInput + "?access_token=cb327c777eff937591311a292e4721e661dd2c7f").subscribe((response)=>{
     const userData=response;
 
     this.user.photoUrl = userData["avatar_url"];
@@ -50,7 +50,7 @@ export class UserRequestService {
 
   repoRequest(userInput) {
 
-    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=" + environment.accessToken).subscribe((response) =>{
+    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=cb327c777eff937591311a292e4721e661dd2c7f").subscribe((response) =>{
       const reposData= response;
 
       this.arrayRepo = [];
