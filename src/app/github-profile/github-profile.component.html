@@ -17,7 +17,7 @@
         </div>
         <br>
         <div class="center">
-          <button class="btn-danger" type="button" name="button" (click)='toggleRepos()'>Repos:{{user.numRepos}}</button>
+          <button class="btn-danger" type="button" name="button" (click)='toggleRepos()' (click)='getRepos(username)'>Repos:{{user.numRepos}} <br> Click to View </button>
         </div>
         <br>
         <p>Created {{user.created|dateCount}} day(s) ago.</p>

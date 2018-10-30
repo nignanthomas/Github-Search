@@ -22,6 +22,7 @@ export class GithubProfileComponent implements OnInit {
   getResponse(username) {
     this.userService.userRequest(username);
     this.user = this.userService.user;
+    this.user.showRepos = false;
 
     console.log("Got User Response");
     console.log(this.user);
@@ -29,8 +30,17 @@ export class GithubProfileComponent implements OnInit {
     this.userService.repoRequest(username);
     this.arrayRepo = this.userService.arrayRepo;
 
+    // console.log("Got Repos Response");
+    // console.log(this.arrayRepo);
+  }
+
+  getRepos(username) {
+    // this.userService.repoRequest(username);
+    this.arrayRepo = this.userService.arrayRepo;
+
     console.log("Got Repos Response");
     console.log(this.arrayRepo);
+
   }
 
 
