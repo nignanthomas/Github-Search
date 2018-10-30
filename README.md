@@ -19,7 +19,7 @@ An App to Search for Github profiles and their Repos.
 
 
 ### Known Bugs
-You have to submit twice to fetch properly from the repos api.
+No known bugs. Contact me if you find any. Thanks!
 
 ### Live site
 [Github-Search](https://nignanthomas.github.io/Github-Search/)
